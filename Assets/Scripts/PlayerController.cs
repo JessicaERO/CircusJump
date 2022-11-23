@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxis("Horizontal");
+        moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x;
         theRB.velocity = new Vector2(moveInput * speed, theRB.velocity.y);
     }
 }
