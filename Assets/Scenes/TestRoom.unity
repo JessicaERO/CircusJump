@@ -859,18 +859,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: prob1
-      value: 65
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: prob2
-      value: 80
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: prob3
-      value: 95
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: prob4
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
+      propertyPath: prob5
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
@@ -889,6 +893,10 @@ PrefabInstance:
       propertyPath: coinPlatPrefab
       value: 
       objectReference: {fileID: 2792857973222251727, guid: 9fd2f33d1df5c4d4cbe014998944ce57, type: 3}
+    - target: {fileID: 3733581494365950491, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
+      propertyPath: movePlatPrefab
+      value: 
+      objectReference: {fileID: 673053710311977953, guid: 4875fdea369666c46a7bbca7cc77364b, type: 3}
     - target: {fileID: 3733581494365950492, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: m_IsActive
       value: 1
