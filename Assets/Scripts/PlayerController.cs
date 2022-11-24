@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     private Rigidbody2D theRB;
     private float moveInput;
     private float speed = 10f;
 
-    private float topScore = 0.0f;
+    public float score = 0.0f;
     public Text scoreText;
 
-    //Se hace un Singleton del script
-    public static PlayerController instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +37,16 @@ public class PlayerController : MonoBehaviour
             this.GetComponent<SpriteRenderer>().flipX = true;
         }
 
-        if (theRB.velocity.y > 0 && transform.position.y > topScore)
+        if (theRB.velocity.y > 0 && transform.position.y > score)
         {
-            topScore = transform.position.y;
+            score = transform.position.y;
         }
-        scoreText.text = "Score: " + Mathf.Round(topScore).ToString();
+        scoreText.text = "Score: " + Mathf.Round(score).ToString();
     }
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x;
+        moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x * 2f;
         theRB.velocity = new Vector2(moveInput * speed, theRB.velocity.y);
     }
 }
