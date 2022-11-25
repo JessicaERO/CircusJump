@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerController : MonoBehaviour
 
     public float score = 0.0f;
     public Text scoreText;
+
+    public float time, timeMax;
+    public bool isDead;
 
     private void Awake()
     {
@@ -42,11 +46,27 @@ public class PlayerController : MonoBehaviour
             score = transform.position.y;
         }
         scoreText.text = "Score: " + Mathf.Round(score).ToString();
+
+        if (isDead)
+        {
+            time = time + Time.deltaTime;
+            if(time >= timeMax)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 
     void FixedUpdate()
     {
+        Debug.Log(Input.GetAxis("Horizontal"));
         moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x * 2f;
         theRB.velocity = new Vector2(moveInput * speed, theRB.velocity.y);
+    }
+
+    private void OnBecameInvisible()
+    {
+        
+        isDead = true;
     }
 }

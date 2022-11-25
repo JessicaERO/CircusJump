@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6601824227533000153
 Transform:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e340dd67bdff9c4ab7f595089151f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   scoreText: {fileID: 0}
 --- !u!1 &3733581494365950492
 GameObject:
@@ -255,3 +256,10 @@ MonoBehaviour:
   platformPrefab: {fileID: 6535687773990143750, guid: e274c23b7ed27d441b241b576ad58ae2, type: 3}
   springPrefab: {fileID: 8587448049680008514, guid: d14bde1b21e0ae144b267fc8d3ce00e3, type: 3}
   hurtPrefab: {fileID: 1300400484289952067, guid: cb38a5dc0419279499b88f4fb53d64ae, type: 3}
+  coinPlatPrefab: {fileID: 0}
+  movePlatPrefab: {fileID: 0}
+  prob1: 0
+  prob2: 0
+  prob3: 0
+  prob4: 0
+  prob5: 0

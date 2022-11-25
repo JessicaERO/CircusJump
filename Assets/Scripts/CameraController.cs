@@ -31,10 +31,10 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         //Esta línea equivale a todo lo comentado arriba
-        transform.position = new Vector3(Mathf.Clamp(target.position.x, maxLeft, maxRight), target.position.y, transform.position.z);
+       // transform.position = new Vector3(Mathf.Clamp(target.position.x, maxLeft, maxRight), target.position.y, transform.position.z);
 
         //Cantidad de movimiento en X y en Y que debe hacer la cámara
-        Vector2 amountToMove = new Vector2(transform.position.x - lastPos.x, transform.position.y - lastPos.y);
+       // Vector2 amountToMove = new Vector2(transform.position.x - lastPos.x, transform.position.y - lastPos.y);
 
         ////Las nubes se mueven conforme a la cámara
         //farBackground.position = farBackground.position + new Vector3(amountToMove.x, amountToMove.y, 0f);
@@ -42,5 +42,12 @@ public class CameraController : MonoBehaviour
         //middleBackground.position += new Vector3(amountToMove.x * .5f, amountToMove.y * .5f, 0f);
         ////Actualizamos la última posición
         //lastPos = transform.position;
+
+
+
+        if(transform.position.y < (target.position.y))
+        {
+            transform.position = new Vector3(Mathf.Clamp(target.position.x, maxLeft, maxRight), target.position.y, transform.position.z);
+        }
     }
 }
