@@ -1927,7 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1855972ab7494dc488d3b2e0b5ece2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalScore: 100
+  finalScore: 200
   finalScreen: {fileID: 1576322581}
 --- !u!1001 &1079902569
 PrefabInstance:
@@ -3509,6 +3509,10 @@ PrefabInstance:
     - target: {fileID: 1133019255640259624, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: m_Name
       value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133019255640259624, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1133019255640259624, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
       propertyPath: m_TagString
