@@ -41,4 +41,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("LevelMenu");
     }
+
+    private void OnApplicationPause(bool pause)
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }

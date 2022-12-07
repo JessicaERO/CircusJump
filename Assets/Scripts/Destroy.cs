@@ -8,10 +8,10 @@ public class Destroy : MonoBehaviour
     public GameObject platformPrefab;
     public GameObject springPrefab;
     public GameObject hurtPrefab;
-    //public GameObject coinPlatPrefab;
-    //public GameObject movePlatPrefab;
+    public GameObject coinPlatPrefab;
+    public GameObject movePlatPrefab;
     private GameObject myPlatform;
-    public float prob1, prob3, prob5;
+    public float prob1, prob2, prob3, prob4, prob5;
     int controller = 10;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,20 +30,20 @@ public class Destroy : MonoBehaviour
                     controller++;
                 }
             }
-            ////PLATAFORMA + MONEDA
-            //else if (x > prob1 && x <= prob2)
-            //{
-            //    Destroy(collision.gameObject);
-            //    controller--;
+            //PLATAFORMA + MONEDA
+            else if (x > prob1 && x <= prob2)
+            {
+                Destroy(collision.gameObject);
+                controller--;
 
-            //    if (controller < 10)
-            //    {
-            //        Instantiate(coinPlatPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (6 + Random.Range(0.2f, 1.0f))), Quaternion.identity);
-            //        controller++;
-            //    }
-            //}
+                if (controller < 10)
+                {
+                    Instantiate(coinPlatPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (6 + Random.Range(0.2f, 1.0f))), Quaternion.identity);
+                    controller++;
+                }
+            }
             //PLATAFORMA DE SALTO
-            else if (x > prob1 && x <= prob3)
+            else if (x > prob2 && x <= prob3)
             {
                 Destroy(collision.gameObject);
                 controller--;
@@ -54,20 +54,20 @@ public class Destroy : MonoBehaviour
                     controller++;
                 }
             }
-            ////PLATAFORMA EN MOVIMIENTO
-            //else if (x > prob3 && x <= prob4)
-            //{
-            //    Destroy(collision.gameObject);
-            //    controller--;
+            //PLATAFORMA EN MOVIMIENTO
+            else if (x > prob3 && x <= prob4)
+            {
+                Destroy(collision.gameObject);
+                controller--;
 
-            //    if (controller < 10)
-            //    {
-            //        Instantiate(movePlatPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (8 + Random.Range(0.2f, 1.0f))), Quaternion.identity);
-            //        controller++;
-            //    }
-            //}
+                if (controller < 10)
+                {
+                    Instantiate(movePlatPrefab, new Vector2(Random.Range(-4.5f, 4.5f), player.transform.position.y + (8 + Random.Range(0.2f, 1.0f))), Quaternion.identity);
+                    controller++;
+                }
+            }
             //PLATAFORMA DE MUERTE
-            else if (x > prob3 && x <= prob5)
+            else if (x > prob4 && x <= prob5)
             {
                 Destroy(collision.gameObject);
                 controller--;
