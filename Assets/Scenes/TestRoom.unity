@@ -359,11 +359,11 @@ MonoBehaviour:
   - {fileID: 7506598019501066558}
   - {fileID: 1566535792924501067}
   probabilities:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
+  - {x: 0, y: 20}
+  - {x: 20, y: 40}
+  - {x: 40, y: 60}
+  - {x: 60, y: 80}
+  - {x: 80, y: 100}
 --- !u!4 &425567392
 Transform:
   m_ObjectHideFlags: 0
