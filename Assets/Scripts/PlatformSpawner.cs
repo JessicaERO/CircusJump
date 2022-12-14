@@ -8,25 +8,47 @@ public class PlatformSpawner : MonoBehaviour
     public Transform[] positions; 
     public Vector2Int[] probabilities;
 
+    public GameObject prefabFilas;
+
     GameObject platformPos;
     GameObject playerPosition;
     GameObject playerControllerPosition;
+    public GameObject platformSpawnerInicial;
+    public GameObject platformSpawnerActual;
 
     //Ir al PlayerController
 
     void Start()
     {
         platformPos.transform.position = Vector3.zero;
-        
-        for (int i = 0; i < positions.Length; i++)
-        {
-            Instantiate(platforms[0], positions[i].position, transform.rotation);
-        }
+
+        //for (int i = 0; i < positions.Length; i++)
+        //{
+        //    Instantiate(platforms[0], positions[i].position, transform.rotation);
+        //}
+
+        //SpawnPlatform();
+        platformSpawnerActual = Instantiate(prefabFilas, Vector3.zero, transform.rotation);
     }
 
     void Update()
     {
          //al principio estaba todo aqui
+    }
+
+    void OnBecameInvisible()
+    {
+        prefabFilas.SetActive (false);
+    }
+
+    public void SpawnPlatform()
+    {
+        int index = Random.Range(0, platformSpawnerActual.transform.childCount);
+        foreach (Transform child in  platformSpawnerActual.transform)
+        {
+            Instantiate(platforms[0], child.position, transform.rotation);
+
+        }
     }
 
     public void RandomPlatform()

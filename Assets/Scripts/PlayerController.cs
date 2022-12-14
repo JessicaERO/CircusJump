@@ -18,10 +18,10 @@ public class PlayerController : MonoBehaviour
     public float time, timeMax;
     public bool isDead;
 
-    public Transform[] filas;
+    //public Transform[] filas;
     public Transform filaInicial;
-    public PlatformSpawner platformSpawnerInicial;
-    //public PlatformSpawner platformSpawner;
+    //public PlatformSpawner platformSpawnerInicial;
+    //public PlatformSpawner platformSpawnerActual;
     //variable transform que guarde la fila actual
 
     //el PlatformSpawner debe ser el que está por debajo de la pantalla
