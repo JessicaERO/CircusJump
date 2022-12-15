@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
 
     //public Transform[] filas;
-    public Transform filaInicial;
+    //public Transform filaInicial;
     //public PlatformSpawner platformSpawnerInicial;
     //public PlatformSpawner platformSpawnerActual;
     //variable transform que guarde la fila actual
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         if (isDead)
         {
             time = time + Time.deltaTime;
-            if(time >= timeMax)
+            if (time >= timeMax)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
@@ -78,10 +78,11 @@ public class PlayerController : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x * 2f;
         theRB.velocity = new Vector2(moveInput * speed, theRB.velocity.y);
     }
-
-    private void OnBecameInvisible()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        isDead = true;
+        if (collision.CompareTag("DeathLane"))
+        {
+            isDead = true;
+        }
     }
 }

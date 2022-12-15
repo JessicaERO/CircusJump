@@ -11,8 +11,9 @@ public class KillPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.SetActive(false);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            this.gameObject.SetActive(false);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 }

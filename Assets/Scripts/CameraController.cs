@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour
 
         if(transform.position.y < (target.position.y))
         {
-            transform.position = new Vector3(Mathf.Clamp(target.position.x, maxLeft, maxRight), target.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, target.position.y, transform.position.z);
         }
     }
 }

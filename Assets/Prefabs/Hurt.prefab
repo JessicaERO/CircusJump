@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8478708337565676483}
   - component: {fileID: 2503697919326010619}
   - component: {fileID: 3063090299935116069}
+  - component: {fileID: 8459819242922286329}
   m_Layer: 0
   m_Name: Hurt
   m_TagString: Platform
@@ -145,3 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1133019255640259624, guid: 99991ee6198e43046bd4b4a0f8c59e82, type: 3}
+--- !u!114 &8459819242922286329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300400484289952067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c95fdda41292a54a95d569f13d3ea1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
