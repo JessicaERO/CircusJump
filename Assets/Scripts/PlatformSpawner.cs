@@ -34,6 +34,7 @@ public class PlatformSpawner : MonoBehaviour
     void Update()
     {
          //al principio estaba todo aqui
+
     }
 
     void OnBecameInvisible()
@@ -94,11 +95,6 @@ public class PlatformSpawner : MonoBehaviour
             
 
         }
-    }
-
-    public void DestroyPlatforms()
-    {
-        //aqui detecta las plataformas que hay y las borra
     }
 
 }

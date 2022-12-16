@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KillPlatform : MonoBehaviour
-{
-    public GameObject player;
-
+public class OnePlatform : MonoBehaviour
+{   
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        //Si el upToDown en el código de player cotroller esta activado
+        if (PlayerController.instance.upToDown == true)
         {
+            //Desactivamos esta plataforma
             this.gameObject.SetActive(false);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         }
     }
 }

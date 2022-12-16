@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - DeathLane
+  - OnePlatform
   layers:
   - Default
   - TransparentFX

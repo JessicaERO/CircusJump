@@ -22,6 +22,6 @@ public class PlatformRow : MonoBehaviour
     //Cuando la fila se haga visible, elija aleatoriamente de ese array una plataforma y la activa
     private void OnBecameVisible()
     {
-        Debug.Log("hola");
+        
     }
 }

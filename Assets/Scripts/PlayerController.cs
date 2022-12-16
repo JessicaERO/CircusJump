@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float time, timeMax;
     public bool isDead;
 
+    public bool upToDown;
+
     //public Transform[] filas;
     //public Transform filaInicial;
     //public PlatformSpawner platformSpawnerInicial;
@@ -70,11 +72,20 @@ public class PlayerController : MonoBehaviour
         }
         //si la altura es mayor que la de la fila actual, llamo a la funcion destruirPlataformas del PlatformSpawner y a la RandomSpawner
         //en ese orden
+
+        //ESTO ES PARA REFERENCIAR EN EL SCRIRPT ONEPLATFORM Y ASI ELIMINARLO
+        //Cuando la velocidad es <= que 0 (osea, cuando el jugado está bajando)
+        if (theRB.velocity.y <= 0)
+            upToDown = true;
+        
+        else
+            upToDown = false;
+        
     }
 
     void FixedUpdate()
     {
-        Debug.Log(Input.GetAxis("Horizontal"));
+        //Debug.Log(Input.GetAxis("Horizontal"));
         moveInput = Input.GetAxis("Horizontal") + Input.acceleration.x * 2f;
         theRB.velocity = new Vector2(moveInput * speed, theRB.velocity.y);
     }
