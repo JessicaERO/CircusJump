@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class David : MonoBehaviour
+public class Platforms : MonoBehaviour
 {
     public Transform cam;
     public GameObject[] plataformasChindren;
     public int plataformaRandom = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,4 +31,6 @@ public class David : MonoBehaviour
 
         }
     }
+
+    //TODO: añadir ObjectPooling
 }
