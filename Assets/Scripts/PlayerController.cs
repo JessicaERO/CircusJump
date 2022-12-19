@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             score = transform.position.y;
         }
-        scoreText.text = "Score: " + Mathf.Round(score).ToString();
+        scoreText.text = "SCORE: " + Mathf.Round(score).ToString();
 
         if (isDead)
         {

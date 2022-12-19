@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
@@ -12,8 +13,6 @@ public class Pickup : MonoBehaviour
 
     ////Variable para guardar el objeto que queremos instanciar al coger un item
     //public GameObject pickUpEffect;
-
-    // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,7 +43,7 @@ public class Pickup : MonoBehaviour
             if (isCoin)
             {
                 ////Aumentamos en 1 la cantidad de monedas coleccionadas
-                //LevelManager.instance.coinCollected++;
+                GameManager.instance.coinText.text = "COINS: " + GameManager.instance.coin;
                 //La moneda ya ha sido cogida
                 isCollected = true;
                 //Tras coger la gema el objeto se destruye
