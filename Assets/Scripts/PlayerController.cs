@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("DeathLane"))
         {
             isDead = true;
+            PlayerPrefs.SetInt("CoinsAmount", GameManager.instance.coin);
         }
     }
 }

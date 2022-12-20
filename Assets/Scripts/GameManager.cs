@@ -8,10 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int coin = 0;
     public Text coinText;
-    // Start is called before the first frame update
-    void Start()
+
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
     // Update is called once per frame
