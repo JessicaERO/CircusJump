@@ -6,12 +6,12 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     public TextMeshProUGUI coins;
-    private int coinsAmount;
+    private int coinsAmount = 0;
     void Start()
     {
         if (PlayerPrefs.HasKey("CoinsAmount"))
         {
-            PlayerPrefs.GetInt("CoinsAmount", coinsAmount);
+            coinsAmount =PlayerPrefs.GetInt("CoinsAmount");
             Debug.Log(coinsAmount);
             coins.text = coinsAmount.ToString();
         }

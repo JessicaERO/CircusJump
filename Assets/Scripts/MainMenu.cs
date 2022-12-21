@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void startGame()
     {
-        SceneManager.LoadScene("TestRoom");
+        SceneManager.LoadScene("InfiniteGame");
     }
 
     public void GoToMainMenu()
@@ -23,6 +23,11 @@ public class MainMenu : MonoBehaviour
     public void Level1()
     {
         SceneManager.LoadScene("Level1");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level2");
     }
 
     public void Shop()
