@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public TextMeshProUGUI coins;
+    public Text coins;
     private int coinsAmount = 0;
     void Start()
     {
