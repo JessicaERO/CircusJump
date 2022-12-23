@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int coin = 0;
+    public int totalCoins = 0;
     public Text coinText;
 
 

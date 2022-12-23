@@ -10,7 +10,6 @@ public class Pickup : MonoBehaviour
     public bool isCoin;
     //Variable para evitar que el mismo item se coja 2 veces
     private bool isCollected;
-
     ////Variable para guardar el objeto que queremos instanciar al coger un item
     //public GameObject pickUpEffect;
     private void Awake()
@@ -21,7 +20,7 @@ public class Pickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Si el objeto que ha colisionado con el item es el jugador y este item no ha sido cogido antes
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player")&&!isCollected)
         {
             //Debug.Log("Me ah tocao");
             //Aumentamos en 1 la cantidad de monedas coleccionadas
@@ -30,6 +29,7 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject);
             ////Reproducimos el efecto de sonido que queremos 
             //AudioManager.instance.PlaySFX(0);
+            isCollected = true;
         }
     }
 }

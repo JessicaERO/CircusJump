@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private float speed = 10f;
 
-    public float score = 0.0f;
+    public int score = 0;
     public Text scoreText;
+    public Text highscoreText;
 
     public float time, timeMax;
     public bool isDead;
@@ -41,8 +42,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
-        //PlatformSpawner = platformSpawnerInicial
-        //filaActual = filaInicial
+        if (PlayerPrefs.HasKey("Highscore"))
+        {
+            highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
+        }
+
     }
 
     private void Update()
@@ -58,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
         if (theRB.velocity.y > 0 && transform.position.y > score)
         {
-            score = transform.position.y;
+            score = (int)transform.position.y;
         }
         scoreText.text = "SCORE: " + Mathf.Round(score).ToString();
 
@@ -94,7 +98,20 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("DeathLane"))
         {
             isDead = true;
-            PlayerPrefs.SetInt("CoinsAmount", GameManager.instance.coin);
+            if (PlayerPrefs.HasKey("CoinsAmount"))
+            {
+                //Obtenemos el total de las monedas ganadas
+                GameManager.instance.totalCoins = PlayerPrefs.GetInt("CoinsAmount");
+                //Le sumamos las monedas obtenidas en esta partida
+                GameManager.instance.totalCoins += GameManager.instance.coin;
+                //Actualizamos el total de monedas ganadas guardadas
+                PlayerPrefs.SetInt("CoinsAmount", GameManager.instance.totalCoins);
+            }
+            if (score>PlayerPrefs.GetInt("Highscore"))
+            {
+                PlayerPrefs.SetInt("Highscore", score);
+            }
+            
         }
     }
 }
