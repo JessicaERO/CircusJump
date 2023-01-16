@@ -14,15 +14,7 @@ public class FitAreaToCamera : MonoBehaviour
     }
     private void FitToCamera(Camera cam)
     {
-        //Para conocer el tamaño de lo que ve la cámara
-        //cam.aspect
-        //cam.ortographicSize
-
-        ////Inicializar el área en la posición (0,0)
-        //Area.SetArea(new Vector2(0, 0));
-
         //Con esto ajustamos la nueva área al ancho y alto de visión de la cámara para ese dispositivo concreto
-        //Area.SetArea(new Vector2(cam.aspect * cam.orthographicSize * 2, cam.orthographicSize * 2));
         Area.Size = new Vector2(cam.aspect * cam.orthographicSize * 2, cam.orthographicSize * 2);
         //Movemos ese área con respecto a la posición y rotación de la cámara
         transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y, 0);

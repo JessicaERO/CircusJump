@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class GameArea : MonoBehaviour
 {
-    //La hacemos privada
+    //privado
     private Rect _area;
-    //Para poder acceder a la referencia desde otro script usamos un accesor
+    //accesor
     public Rect Area
     {
-        //Obtenemos la variable por referencia a la que queremos acceder 
+        //se obtiene la variable por referencia a la que queremos acceder 
         get { return _area; }
-        //Ponemos el valor de esa variable o referencia al usar el accesor
+        //poner el valor de esa variable o referencia al usar el accesor
         set { _area = value; }
     }
 
-    //Creamos una referencia con su accesor para el GameArea principal
+    //referencia con su accesor para el GameArea principal
     private static GameArea _main;
     public static GameArea Main
     {
@@ -57,13 +57,10 @@ public class GameArea : MonoBehaviour
     //Metodo para generar el area
     public void SetArea(Vector2 size)
     {
-        //Area = new Rect (0,0,size.x, size.y);
-        //Area = new Rect (Vector2.zero, size);
         Area = new Rect(size.x * -0.5f, size.y * -0.5f, size.x, size.y);
     }
     private void OnDrawGizmos()
     {
-        //El Gizmo.Color pinta solo el gizmo situado en la parte de abajo
 
         //Asignamos el gizmo al objeto
         Gizmos.matrix = transform.localToWorldMatrix;
@@ -94,10 +91,7 @@ public class GameArea : MonoBehaviour
     private void OnValidate()
     {
         SetArea(_size);
-        //inicializamos el color de las aristas  del gizmo
-        //gizmoWireColor = new Color(gizmoColor.r, gizmoColor.g, gizmoColor.b, gizmoColor.a);
     }
-
     //es un metodo que nos devuelve una posicion aleatoria dentro del área de juego
     public Vector3 GetRandomPosition()
     {

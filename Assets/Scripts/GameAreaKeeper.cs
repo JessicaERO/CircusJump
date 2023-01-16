@@ -33,16 +33,7 @@ public class GameAreaKeeper : MonoBehaviour
             areaSpacePosition.x = gameArea.Area.xMin;
         }
 
-        //if (areaSpacePosition.y < gameArea.Area.yMin)
-        //{
-        //    areaSpacePosition.y = gameArea.Area.yMax;
-        //}
-        //else if (areaSpacePosition.y > gameArea.Area.yMax)
-        //{
-        //    areaSpacePosition.y = gameArea.Area.yMin;
-        //}
-
-        //Movemos la nave a esa posicion
+        //Movemos al player a esa posicion
         transform.position = gameArea.transform.TransformPoint(areaSpacePosition);
     }
 }
