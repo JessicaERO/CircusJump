@@ -3713,19 +3713,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - prefab: {fileID: 6535687773990143750, guid: e274c23b7ed27d441b241b576ad58ae2, type: 3}
-    amount: 0
-    expandable: 0
+    amount: 8
+    expandable: 1
   - prefab: {fileID: 2792857973222251727, guid: 9fd2f33d1df5c4d4cbe014998944ce57, type: 3}
-    amount: 0
+    amount: 8
     expandable: 0
   - prefab: {fileID: 8587448049680008514, guid: d14bde1b21e0ae144b267fc8d3ce00e3, type: 3}
-    amount: 0
+    amount: 8
     expandable: 0
   - prefab: {fileID: 673053710311977953, guid: 4875fdea369666c46a7bbca7cc77364b, type: 3}
-    amount: 0
+    amount: 8
     expandable: 0
   - prefab: {fileID: 1300400484289952067, guid: cb38a5dc0419279499b88f4fb53d64ae, type: 3}
-    amount: 0
+    amount: 8
     expandable: 0
   pooledItems: []
 --- !u!4 &1061099221

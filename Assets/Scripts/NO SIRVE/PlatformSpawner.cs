@@ -52,10 +52,10 @@ public class PlatformSpawner : MonoBehaviour
 
                 if (p != null)
                 {
-                    //La posición del asteroide será aleatoria relativa al creador de asteroides
+                    //La posición de la plataforma será aleatoria relativa al creador de asteroides
                     p = Instantiate(platforms[1], positions[i]);
                     //p.transform.position = this.transform.position + new Vector3(Random.Range(-10, 10), 0, 0);
-                    //Activamos el asteroide en concreto
+                    //Activamos la plataforma en concreto
                     p.SetActive(true);
                 }
                 //Instantiate(platforms[1], positions[i]);
