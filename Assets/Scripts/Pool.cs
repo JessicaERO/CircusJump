@@ -41,12 +41,13 @@ public class Pool : MonoBehaviour
             //Hacemos un bucle para la cantidad del objeto sobre el que hacemos el Pool
             for (int i = 0; i < item.amount; i++)
             {
-                //Referenciamos el objeto instanciado
-                GameObject obj = Instantiate(item.prefab);
-                //Desactivamos el objeto
-                obj.SetActive(false);
+                ////Referenciamos el objeto instanciado
+                //GameObject obj = Instantiate(item.prefab);
+                ////Desactivamos el objeto
+                //obj.SetActive(false);
+                //GameObject obj = GameObject.FindGameObjectsWithTag("Row");
                 //Lo añadimos a la lista de objetos que van a ser reutilizados
-                pooledItems.Add(obj);
+                pooledItems.Add(GameObject.FindGameObjectsWithTag("Row")[i]);
             }
         }
     }

@@ -4,38 +4,42 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    public GameObject[] platforms; //los distintos tipos de plataformas
+    //public GameObject[] platforms; //los distintos tipos de plataformas
     public Transform[] positions; 
-    public Vector2Int[] probabilities;
+    //public Vector2Int[] probabilities;
 
     public GameObject prefabFilas;
 
     GameObject platformPos;
-    GameObject playerPosition;
-    GameObject playerControllerPosition;
-    public GameObject platformSpawnerInicial;
-    public GameObject platformSpawnerActual;
+    //GameObject playerPosition;
+    //GameObject playerControllerPosition;
+    //public GameObject platformSpawnerInicial;
+    //public GameObject platformSpawnerActual;
 
-    void Start()
-    {
-        platformPos.transform.position = Vector3.zero;
-        platformSpawnerActual = Instantiate(prefabFilas, Vector3.zero, transform.rotation);
-    }
+    //void Start()
+    //{
+    //    platformPos.transform.position = Vector3.zero;
+    //    platformSpawnerActual = Instantiate(prefabFilas, Vector3.zero, transform.rotation);
+    //}
 
     void OnBecameInvisible()
     {
-        prefabFilas.SetActive (false);
-    }
-
-    public void SpawnPlatform()
-    {
-        int index = Random.Range(0, platformSpawnerActual.transform.childCount);
-        foreach (Transform child in  platformSpawnerActual.transform)
+        Pool.singleton.pooledItems[0].SetActive(false);
+        foreach(GameObject item in Pool.singleton.pooledItems)
         {
-            Instantiate(platforms[0], child.position, transform.rotation);
 
         }
     }
+
+    //public void SpawnPlatform()
+    //{
+    //    int index = Random.Range(0, platformSpawnerActual.transform.childCount);
+    //    foreach (Transform child in  platformSpawnerActual.transform)
+    //    {
+    //        Instantiate(platforms[0], child.position, transform.rotation);
+
+    //    }
+    //}
 
     public void RandomPlatform()
     {
@@ -48,7 +52,7 @@ public class PlatformSpawner : MonoBehaviour
             if (hasPlatform <= 10)
             {
                 //Creamos una referencia a una plataforma que se pueda usar
-                GameObject p = Pool.singleton.Get("Platform");
+                GameObject p = Pool.singleton.Get("Row");
 
                 if (p != null)
                 {

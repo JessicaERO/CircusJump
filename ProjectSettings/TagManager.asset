@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - DeathLane
   - OnePlatform
+  - Row
   layers:
   - Default
   - TransparentFX
