@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
+    public Event pickUpCoin;
     public static Pickup instance;
     //Variable para comprobar si el item que hemos cogido es una gema o una cura
     public bool isCoin;
@@ -24,7 +25,8 @@ public class Pickup : MonoBehaviour
         {
             //Debug.Log("Me ah tocao");
             //Aumentamos en 1 la cantidad de monedas coleccionadas
-            GameManager.instance.coin++;
+            //GameManager.instance.coin++;
+            pickUpCoin.Ocurred(this.gameObject);
             //Tras coger la gema el objeto se destruye
             Destroy(gameObject);
             ////Reproducimos el efecto de sonido que queremos 

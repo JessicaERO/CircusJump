@@ -21,4 +21,9 @@ public class GameManager : MonoBehaviour
     {
         coinText.text = "COINS: " + coin.ToString();
     }
+
+    public void AddCoin()
+    {
+        coin++;
+    }
 }

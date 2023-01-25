@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 11400000, guid: 9ed713b342599a34bb613f91347ae522, type: 2}
   isCoin: 1
 --- !u!61 &4159168270896455458
 BoxCollider2D:

@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &42128724
 SpriteRenderer:
@@ -2769,6 +2770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &466428830
 SpriteRenderer:
@@ -2955,6 +2957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &482053563
 SpriteRenderer:
@@ -4166,6 +4169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &719284146
 SpriteRenderer:
@@ -4287,6 +4291,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3264389758211641930, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (12)
@@ -4333,6 +4341,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3631392501041410763, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218050093294486219, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996232260338720198, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981292801466735096, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5898,6 +5918,7 @@ GameObject:
   - component: {fileID: 1053570938}
   - component: {fileID: 1053570941}
   - component: {fileID: 1053570940}
+  - component: {fileID: 1053570942}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -5965,6 +5986,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f85e0afe0b110d47b21b1cb049f4941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1053570942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053570937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba4ddc6c60c9844bae322f46454269b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gEvent: {fileID: 11400000, guid: 9ed713b342599a34bb613f91347ae522, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1053570940}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1061099219
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &1083635857
 SpriteRenderer:
@@ -8578,6 +8628,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8981292801466735096, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
 --- !u!1 &1600583852
@@ -9859,6 +9913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &1754784172
 SpriteRenderer:
@@ -11444,6 +11499,80 @@ Transform:
   m_Father: {fileID: 1099723400}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2093734603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2093734605}
+  - component: {fileID: 2093734607}
+  - component: {fileID: 2093734606}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2093734605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093734603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.9554863, y: 3.9356427, z: -0.027168231}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093734606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093734603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba4ddc6c60c9844bae322f46454269b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gEvent: {fileID: 11400000, guid: 9ed713b342599a34bb613f91347ae522, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2093734607}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayCoinSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2093734607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093734603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2c4e6def8690b4c92aef0259ad4a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinSound: {fileID: 0}
 --- !u!1 &2097086087
 GameObject:
   m_ObjectHideFlags: 0
@@ -11712,6 +11841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f3c24c0fede4444ba2141f63297aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCoin: {fileID: 0}
   isCoin: 1
 --- !u!212 &2142429612
 SpriteRenderer:
