@@ -8,6 +8,11 @@ public class Platforms : MonoBehaviour
     public GameObject[] plataformasChindren;
     public int plataformaRandom = 0;
 
+    private void OnBecameInvisible()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {

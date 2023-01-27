@@ -37,7 +37,6 @@ public class PlatformSpawner : MonoBehaviour
     //    foreach (Transform child in  platformSpawnerActual.transform)
     //    {
     //        Instantiate(platforms[0], child.position, transform.rotation);
-
     //    }
     //}
 
@@ -67,5 +66,4 @@ public class PlatformSpawner : MonoBehaviour
             }
         }
     }
-
 }
