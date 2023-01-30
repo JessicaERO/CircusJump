@@ -22,17 +22,13 @@ public class PlatformSpawner : MonoBehaviour
     //    platformSpawnerActual = Instantiate(prefabFilas, Vector3.zero, transform.rotation);
     //}
 
-    void OnBecameInvisible()
-    {
-        if (!Pool.singleton.pooledItems[0].activeInHierarchy)
-        {
+    //void OnBecameInvisible()
+    //{
+    //    if (!Pool.singleton.pooledItems[0].activeInHierarchy)
+    //    {
 
-        }
-        //foreach(GameObject item in Pool.singleton.pooledItems)
-        //{
-
-        //}
-    }
+    //    }
+    //}
     //void OnBecameVisible()
     //{
     //    Pool.singleton.pooledItems[0].SetActive(true);
