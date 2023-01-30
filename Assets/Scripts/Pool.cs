@@ -38,16 +38,20 @@ public class Pool : MonoBehaviour
         //Recorremos la lista de objetos sobre los que se puede hacer el Pool
         foreach (PoolItem item in items)
         {
+            float aux = 2.5f;
             //Hacemos un bucle para la cantidad del objeto sobre el que hacemos el Pool
             for (int i = 0; i < item.amount; i++)
             {
-                ////Referenciamos el objeto instanciado
-                //GameObject obj = Instantiate(item.prefab);
-                ////Desactivamos el objeto
-                //obj.SetActive(false);
+                //Referenciamos el objeto instanciado
+                GameObject obj = Instantiate(item.prefab);
+                //Desactivamos el objeto
+                obj.SetActive(true);               
+                obj.transform.position = new Vector3(transform.position.x, 0 + aux, transform.position.z);
+                aux += 2.5f;
+                pooledItems.Add(obj);
                 //GameObject obj = GameObject.FindGameObjectsWithTag("Row");
                 //Lo añadimos a la lista de objetos que van a ser reutilizados
-                pooledItems.Add(GameObject.FindGameObjectsWithTag("Row")[i]);
+                //pooledItems.Add(GameObject.FindGameObjectsWithTag("Row")[i]);
             }
         }
     }

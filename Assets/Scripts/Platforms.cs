@@ -6,12 +6,16 @@ public class Platforms : MonoBehaviour
 {
     public Transform cam;
     public GameObject[] plataformasChindren;
-    public int plataformaRandom = 0;
+    private int plataformaRandom = 0;
 
-    private void OnBecameInvisible()
-    {
+    //private void OnBecameInvisible()
+    //{
+    //    //Debug.Log("bye");
+    //    //gameObject.SetActive(false);
+    //    //transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
         
-    }
+        
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +33,24 @@ public class Platforms : MonoBehaviour
             transform.position = new Vector3(transform.position.x, cam.position.y + 12, transform.position.z);
             transform.position = new Vector3(Random.Range(1, 10), transform.position.y, transform.position.z);
 
-            plataformasChindren[plataformaRandom].SetActive(false);
+            //plataformasChindren[plataformaRandom].SetActive(false);
 
             plataformaRandom = Random.Range(0, plataformasChindren.Length);
-            plataformasChindren[plataformaRandom].SetActive(true);
+            //plataformasChindren[plataformaRandom].SetActive(true);
 
         }
     }
 
-    //TODO: añadir ObjectPooling
+    /// <summary>
+    /// Cambia el tipo de plataforma
+    /// </summary>
+    public void ChangeTypePlatform()
+    {
+        //desactiva la plataforma actual
+        plataformasChindren[plataformaRandom].SetActive(false);
+        //actualiza el indice
+        //plataformaRandom = Random.Range(0, plataformasChindren.Length);
+        //activa uno de los hijos de este objeto al azar
+        plataformasChindren[plataformaRandom].SetActive(true);
+    }
 }
