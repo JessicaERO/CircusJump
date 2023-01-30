@@ -24,12 +24,19 @@ public class PlatformSpawner : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Pool.singleton.pooledItems[0].SetActive(false);
-        foreach(GameObject item in Pool.singleton.pooledItems)
+        if (!Pool.singleton.pooledItems[0].activeInHierarchy)
         {
 
         }
+        //foreach(GameObject item in Pool.singleton.pooledItems)
+        //{
+
+        //}
     }
+    //void OnBecameVisible()
+    //{
+    //    Pool.singleton.pooledItems[0].SetActive(true);
+    //}
 
     //public void SpawnPlatform()
     //{

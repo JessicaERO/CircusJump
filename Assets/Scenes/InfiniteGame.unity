@@ -6945,7 +6945,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2375fa6d3cf06d46813184f1c605dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positions: []
+  positions:
+  - {fileID: 1756644819}
+  - {fileID: 1026476310}
+  - {fileID: 1305944845}
+  - {fileID: 313999196}
+  - {fileID: 653157414}
   prefabFilas: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
 --- !u!4 &1315541445
 Transform:

@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayCoinSound()
     {
-        //coinSound.Play();
-        Debug.Log("clin!");
+        coinSound.Play();
+        //Debug.Log("clin!");
     }
 }
