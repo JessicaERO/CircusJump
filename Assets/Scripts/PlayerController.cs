@@ -21,18 +21,27 @@ public class PlayerController : MonoBehaviour
 
     public bool upToDown;
 
+    Scene currentScene;
+    string scene;
+
     private void Awake()
     {
         instance = this;
+        currentScene = SceneManager.GetActiveScene();
+        scene = currentScene.ToString();
     }
 
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
-        if (PlayerPrefs.HasKey("Highscore"))
+        if (scene == "InfiniteGame")
         {
-            highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
+            if (PlayerPrefs.HasKey("Highscore"))
+            {
+                highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
+            }
         }
+        
     }
 
     private void Update()

@@ -2,21 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platforms : MonoBehaviour
+public class ActivePlatform : MonoBehaviour
 {
     public Transform cam;
     public GameObject[] plataformasChindren;
-    private int plataformaRandom = 0;
-
-    //private void OnBecameInvisible()
-    //{
-    //    //Debug.Log("bye");
-    //    //gameObject.SetActive(false);
-    //    //transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-        
-        
-    //}
-
+    public int plataformaRandom = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,31 +17,17 @@ public class Platforms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < (cam.position.y - 10))
+        if (transform.position.y < (cam.position.y - 10))
         {
-            
+
             transform.position = new Vector3(transform.position.x, cam.position.y + 12, transform.position.z);
             transform.position = new Vector3(Random.Range(1, 10), transform.position.y, transform.position.z);
 
-            //plataformasChindren[plataformaRandom].SetActive(false);
-
             plataformasChindren[plataformaRandom].SetActive(false);
+
             plataformaRandom = Random.Range(0, plataformasChindren.Length);
             plataformasChindren[plataformaRandom].SetActive(true);
 
         }
-    }
-
-    /// <summary>
-    /// Cambia el tipo de plataforma
-    /// </summary>
-    public void ChangeTypePlatform()
-    {
-        //desactiva la plataforma actual
-        plataformasChindren[plataformaRandom].SetActive(false);
-        //actualiza el indice
-        plataformaRandom = Random.Range(0, plataformasChindren.Length);
-        //activa uno de los hijos de este objeto al azar
-        plataformasChindren[plataformaRandom].SetActive(true);
     }
 }
