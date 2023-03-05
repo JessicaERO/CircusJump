@@ -7,7 +7,8 @@ public class Shop : MonoBehaviour
 {
     public Text coins;
     private int coinsAmount = 0;
-    public int articlePrice;
+    public int skinPrice;
+    public Sprite newSkin;
     void Start()
     {
         if (PlayerPrefs.HasKey("CoinsAmount"))
@@ -22,20 +23,21 @@ public class Shop : MonoBehaviour
         //coins.text = "Coins: " + monedas;
     }
 
-    public void PurchaseArticle()
+    public void PurchaseSkin()
     {
         //Carga el valor de las monedas guardado en las playerprefs
         int monedas = PlayerPrefs.GetInt("Coins", 0);
 
-        if (monedas >= articlePrice)
+        if (monedas >= skinPrice)
         {
             //Resta el costo del artículo al valor de las monedas
-            monedas -= articlePrice;
+            monedas -= skinPrice;
             //Guarda el nuevo valor de las monedas en las playerprefs
             PlayerPrefs.SetInt("Monedas", monedas);
             //Actualiza el texto de las monedas en la tienda
             coins.text = "Monedas: " + monedas;
-
+            Sprite newSprite = Resources.Load<Sprite>("Skins/" + newSkin.name);
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().sprite = newSprite;
             //TODO: dar al jugador el artículo comprado
         }
         else
