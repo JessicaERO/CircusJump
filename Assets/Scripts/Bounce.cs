@@ -6,9 +6,17 @@ public class Bounce : MonoBehaviour
 {
     private SpriteRenderer sprite;
     private bool moved;
+
+
+    private GameObject player;
+    private BoxCollider2D miboxCollider2D;
+
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+
+        miboxCollider2D = GetComponent<BoxCollider2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     //private void Update()
     //{
@@ -20,6 +28,19 @@ public class Bounce : MonoBehaviour
     //    //else
     //    //    moved = false;
     //}
+
+    private void Update()
+    {
+        if((player.transform.position.y+0.5f )< transform.position.y)
+        {
+            miboxCollider2D.enabled = false;
+        }
+        else
+        {
+            miboxCollider2D.enabled = true;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)

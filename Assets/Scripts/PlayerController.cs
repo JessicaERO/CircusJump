@@ -24,11 +24,16 @@ public class PlayerController : MonoBehaviour
     Scene currentScene;
     string scene;
 
+    public GameManager gameManager;
+    private SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
         instance = this;
         currentScene = SceneManager.GetActiveScene();
         scene = currentScene.ToString();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Start()
@@ -41,7 +46,7 @@ public class PlayerController : MonoBehaviour
                 highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
             }
         }
-        
+        spriteRenderer.sprite = gameManager.skins[gameManager.currentSkin];
     }
 
     private void Update()

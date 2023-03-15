@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int coin = 0;
+    public Sprite[] skins;
+    public int currentSkin;
     public int totalCoins = 0;
     public Text coinText;
 
