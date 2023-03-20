@@ -5986,6 +5986,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
+  skins:
+  - {fileID: 21300000, guid: 83c005f23706e664cb30432487f40860, type: 3}
+  - {fileID: 21300000, guid: d1cf82e1cee5cee4fbe4367466c628bb, type: 3}
+  - {fileID: 21300000, guid: 9eeafb80a3980194ea233ec1fabafabd, type: 3}
+  - {fileID: 21300000, guid: cf3496b8cc393694da6b785383eb0ca1, type: 3}
+  currentSkin: 0
   totalCoins: 0
   coinText: {fileID: 387057535}
 --- !u!114 &1053570941
@@ -6437,6 +6443,7 @@ MonoBehaviour:
   timeMax: 0.5
   isDead: 0
   upToDown: 0
+  gameManager: {fileID: 1053570940}
 --- !u!50 &1154942913
 Rigidbody2D:
   serializedVersion: 4

@@ -7,18 +7,24 @@ public class Buttons : MonoBehaviour
 {
     public int skinIndex;
     public int costoSkin;
-    public Shop Shop;
+    public Shop shop;
+    public GameManager gameManager;
 
-    private Button buttons;
+    private Button button;
 
     private void Start()
     {
-        buttons = GetComponent<Button>();
-        buttons.onClick.AddListener(ComprarSkin);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(ComprarSkin);
     }
 
     private void ComprarSkin()
     {
-        Shop.PurchaseSkin(skinIndex, costoSkin);
+        if (gameManager.coin >= costoSkin)
+        {
+            gameManager.coin -= costoSkin;
+            shop.UpdateCoinsText(); // Actualizar monedas en la tienda
+            shop.PurchaseSkin(skinIndex, costoSkin);
+        }
     }
 }

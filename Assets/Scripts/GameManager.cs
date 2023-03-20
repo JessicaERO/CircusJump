@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public int totalCoins = 0;
     public Text coinText;
 
-
     private void Awake()
     {
         instance = this;
@@ -27,5 +26,10 @@ public class GameManager : MonoBehaviour
     public void AddCoin()
     {
         coin++;
+    }
+
+    public void UpdateTotalCoins(int skinPrice)
+    {
+        totalCoins += skinPrice;
     }
 }

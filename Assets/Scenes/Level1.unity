@@ -2035,6 +2035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
+  skins: []
+  currentSkin: 0
   totalCoins: 0
   coinText: {fileID: 1729495471}
 --- !u!114 &1053570942
@@ -6304,6 +6306,7 @@ MonoBehaviour:
   timeMax: 0.5
   isDead: 0
   upToDown: 0
+  gameManager: {fileID: 0}
 --- !u!114 &8128010642351024538
 MonoBehaviour:
   m_ObjectHideFlags: 0
