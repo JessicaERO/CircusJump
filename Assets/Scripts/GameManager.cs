@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
         coin++;
     }
 
-    public void UpdateTotalCoins(int skinPrice)
-    {
-        totalCoins += skinPrice;
-    }
+    //public void UpdateTotalCoins(int skinPrice)
+    //{
+    //    totalCoins += skinPrice;
+    //}
 }

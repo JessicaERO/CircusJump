@@ -36,7 +36,7 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void UpdateCoinsText()
+    public void UpdateCoinsText()
     {
         coins.text = "Coins: " + GameManager.instance.coin.ToString();
     }
