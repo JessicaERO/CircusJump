@@ -74,4 +74,10 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    void Start()
+    {
+        //Para que la pantalla no se apague mientras juegas
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
 }

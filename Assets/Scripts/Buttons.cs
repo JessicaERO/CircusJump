@@ -15,14 +15,16 @@ public class Buttons : MonoBehaviour
     private void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(ComprarSkin);
+        //button.onClick.AddListener(ComprarSkin);
     }
 
-    private void ComprarSkin()
+    public void ComprarSkin()
     {
-        if (gameManager.coin >= costoSkin)
+        Debug.Log("comprar skin: " + PlayerPrefs.GetInt("CoinsAmount", 0) + " - " + costoSkin);
+
+        if (PlayerPrefs.GetInt("CoinsAmount", 0) >= costoSkin)
         {
-            gameManager.coin -= costoSkin;
+            PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoinsAmount", 0) - costoSkin);
             shop.UpdateCoinsText(); // Actualizar monedas en la tienda
             shop.PurchaseSkin(skinIndex, costoSkin);
         }

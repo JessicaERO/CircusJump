@@ -484,9 +484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '100
-
-'
+  m_Text: 000
 --- !u!222 &173842509
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -655,7 +653,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225347248}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225347250}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ComprarSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225347248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinIndex: 3
-  costoSkin: 3
+  costoSkin: 100
   shop: {fileID: 2032061381}
   gameManager: {fileID: 842253891}
 --- !u!1 &282376525
@@ -959,13 +969,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2032061376}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 530266790}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ComprarSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1023,8 +1033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinIndex: 1
   costoSkin: 0
-  shop: {fileID: 0}
-  gameManager: {fileID: 0}
+  shop: {fileID: 2032061381}
+  gameManager: {fileID: 842253891}
 --- !u!1 &664226659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,7 +1665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1203476501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1203476503}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ComprarSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1203476501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,9 +1729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinIndex: 2
-  costoSkin: 0
-  shop: {fileID: 0}
-  gameManager: {fileID: 0}
+  costoSkin: 50
+  shop: {fileID: 2032061381}
+  gameManager: {fileID: 842253891}
 --- !u!1 &1219879980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,7 +2193,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2006011285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2006011287}
+        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
+        m_MethodName: ComprarSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2006011285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2223,9 +2257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinIndex: 4
-  costoSkin: 0
-  shop: {fileID: 0}
-  gameManager: {fileID: 0}
+  costoSkin: 200
+  shop: {fileID: 2032061381}
+  gameManager: {fileID: 842253891}
 --- !u!1 &2032061376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2380,18 @@ MonoBehaviour:
   coins: {fileID: 173842508}
   skinPrice: 0
   newSkin: {fileID: 0}
+  skinCount: 2
+  skinButtons:
+  - {fileID: 530266787}
+  - {fileID: 1203476500}
+  - {fileID: 225347247}
+  - {fileID: 2006011284}
+  skinButtonTexts:
+  - {fileID: 1003006439}
+  - {fileID: 1751745488}
+  - {fileID: 715176892}
+  - {fileID: 157667716}
+  selectedSkinIndex: 1
 --- !u!1 &2032837938
 GameObject:
   m_ObjectHideFlags: 0
