@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 3
+  skinIndex: 2
   costoSkin: 100
   shop: {fileID: 2032061381}
   gameManager: {fileID: 842253891}
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 1
+  skinIndex: 0
   costoSkin: 0
   shop: {fileID: 2032061381}
   gameManager: {fileID: 842253891}
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 2
+  skinIndex: 1
   costoSkin: 50
   shop: {fileID: 2032061381}
   gameManager: {fileID: 842253891}
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 4
+  skinIndex: 3
   costoSkin: 200
   shop: {fileID: 2032061381}
   gameManager: {fileID: 842253891}
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   coins: {fileID: 173842508}
   skinPrice: 0
   newSkin: {fileID: 0}
-  skinCount: 2
+  skinCount: 4
   skinButtons:
   - {fileID: 530266787}
   - {fileID: 1203476500}

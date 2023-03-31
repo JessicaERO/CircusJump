@@ -26,7 +26,8 @@ public class Buttons : MonoBehaviour
         {
             PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoinsAmount", 0) - costoSkin);
             shop.UpdateCoinsText(); // Actualizar monedas en la tienda
-            shop.PurchaseSkin(skinIndex, costoSkin);
+            //shop.PurchaseSkin(skinIndex, costoSkin);
+            shop.SelectSkin(skinIndex);
         }
     }
 }

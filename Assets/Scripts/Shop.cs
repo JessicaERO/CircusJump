@@ -31,7 +31,8 @@ public class Shop : MonoBehaviour
         UpdateCoinsText();
 
         LoadSelectedSkinIndex();
-        UpdateSkinButtons();
+        //UpdateSkinButtons();
+        UpdateShop();
     }
 
     public void PurchaseSkin(int skinIndex, int skinPrice)
@@ -48,7 +49,8 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("CoinsAmount", gameManager.coin);
             Debug.Log("purchase");
 
-            UpdateSkinButtons();
+            //UpdateSkinButtons();
+            UpdateShop();
         }
     }
 
@@ -57,12 +59,13 @@ public class Shop : MonoBehaviour
         coins.text = "Coins: " + GameManager.instance.coin.ToString();
     }
 
-    public void SelectSkin(int skinIndex)
-    {
-        selectedSkinIndex = skinIndex;
-        SaveSelectedSkinIndex();
-        UpdateSkinButtons();
-    }
+    //public void SelectSkin(int skinIndex)
+    //{
+    //    selectedSkinIndex = skinIndex;
+    //    SaveSelectedSkinIndex();
+    //    //UpdateSkinButtons();
+    //    UpdateShop();
+    //}
 
     void LoadSelectedSkinIndex()
     {
@@ -74,38 +77,111 @@ public class Shop : MonoBehaviour
         PlayerPrefs.SetInt("selectedSkinIndex", selectedSkinIndex);
     }
 
-    void UpdateSkinButtons()
+    public void UpdateShop()
     {
-        for (int i = 0; i < skinCount; i++)
+        // Cargar la skin seleccionada actualmente
+        selectedSkinIndex = PlayerPrefs.GetInt("selectedSkinIndex", 0);
+
+        // Actualizar los botones de la tienda
+        for (int i = 0; i < skinButtons.Length; i++)
         {
-            if (PlayerPrefs.GetInt("skin" + i + "Purchased", 0) == 1)
+            // Obtener el botón y el texto del botón para esta skin
+            Button button = skinButtons[i];
+            Text buttonText = skinButtonTexts[i];
+
+            // Comprobar si esta skin ya está comprada
+            bool isPurchased = PlayerPrefs.GetInt("Skin" + i, 0) == 1;
+
+            if (isPurchased)
             {
-                if (i == selectedSkinIndex - 1)
+                // Si la skin ya está comprada, comprobar si es igual a la skin seleccionada actualmente
+                if (i == selectedSkinIndex)
                 {
-                    skinButtonTexts[i].text = "Seleccionado";
-                    skinButtons[i].interactable = false;
+                    // Si la skin ya está seleccionada, mostrar "seleccionado" y bloquear el botón
+                    buttonText.text = "Seleccionado";
+                    button.interactable = false;
                 }
                 else
                 {
-                    skinButtonTexts[i].text = "Seleccionar";
-                    skinButtons[i].interactable = true;
+                    // Si la skin no está seleccionada, mostrar "seleccionar" y habilitar el botón
+                    buttonText.text = "Seleccionar";
+                    button.interactable = true;
                 }
             }
             else
             {
-                int cost = skinButtons[i].GetComponent<Buttons>().costoSkin;
-
-                if (cost <= 0)
-                {
-                    skinButtonTexts[i].text = "Seleccionado";
-                    skinButtons[i].interactable = false;
-                }
-                else
-                {
-                    skinButtonTexts[i].text = cost + "$";
-                    skinButtons[i].interactable = true;
-                }
+                // Si la skin no está comprada, mostrar el precio y habilitar el botón
+                buttonText.text = skinButtons[i].GetComponent<Buttons>().costoSkin.ToString();
+                button.interactable = true;
             }
         }
     }
+
+    public void SelectSkin(int index)
+    {
+        // Comprobar si esta skin ya está comprada
+        bool isPurchased = PlayerPrefs.GetInt("Skin" + index, 0) == 1;
+        Buttons buttons = skinButtons[index].GetComponent<Buttons>();
+
+        if (isPurchased)
+        {
+            // Si la skin ya está comprada, seleccionarla y guardar la selección
+            selectedSkinIndex = index;
+            PlayerPrefs.SetInt("selectedSkinIndex", selectedSkinIndex);
+        }
+        else
+        {
+            // Si la skin no está comprada, comprobar si el jugador tiene suficiente dinero para comprarla
+            if (gameManager.coin >= buttons.costoSkin)
+            {
+                // Si el jugador tiene suficiente dinero, comprar la skin y guardar la compra
+                gameManager.coin -= buttons.costoSkin;
+                PlayerPrefs.SetInt("Money", gameManager.coin);
+                PlayerPrefs.SetInt("Skin" + index, 1);
+
+                // Seleccionar la skin y guardar la selección
+                selectedSkinIndex = index;
+                PlayerPrefs.SetInt("selectedSkinIndex", selectedSkinIndex);
+            }
+        }
+
+        // Actualizar la tienda para reflejar los cambios
+        UpdateShop();
+    }
+
+    //void UpdateSkinButtons()
+    //{
+    //    for (int i = 0; i < skinCount; i++)
+    //    {
+    //        Debug.Log("for skin: " + i);
+    //        if (PlayerPrefs.GetInt("skin" + i + "Purchased", 0) == 1)
+    //        {
+    //            if (i == selectedSkinIndex - 1)
+    //            {
+    //                skinButtonTexts[i].text = "Seleccionado";
+    //                skinButtons[i].interactable = false;
+    //            }
+    //            else
+    //            {
+    //                skinButtonTexts[i].text = "Seleccionar";
+    //                skinButtons[i].interactable = true;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            int cost = skinButtons[i].GetComponent<Buttons>().costoSkin;
+
+    //            if (cost <= 0)
+    //            {
+    //                skinButtonTexts[i].text = "Seleccionado";
+    //                skinButtons[i].interactable = false;
+    //            }
+    //            else
+    //            {
+    //                skinButtonTexts[i].text = cost + "$";
+    //                skinButtons[i].interactable = true;
+    //            }
+    //        }
+    //    }
+    //}
 }
