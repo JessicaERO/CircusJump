@@ -1201,6 +1201,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715176890}
   m_CullTransparentMesh: 1
+--- !u!1 &730891468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730891470}
+  - component: {fileID: 730891469}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &730891469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730891468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b88cbd263351249adcf5aeedf95268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: 0
+  skins:
+  - {fileID: 21300000, guid: 83c005f23706e664cb30432487f40860, type: 3}
+  - {fileID: 21300000, guid: d1cf82e1cee5cee4fbe4367466c628bb, type: 3}
+  - {fileID: 21300000, guid: cf3496b8cc393694da6b785383eb0ca1, type: 3}
+  - {fileID: 21300000, guid: 9eeafb80a3980194ea233ec1fabafabd, type: 3}
+  currentSkin: 0
+  totalCoins: 0
+  coinText: {fileID: 173842508}
+--- !u!4 &730891470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730891468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 763.2897, y: 983.23834, z: -1342.4993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842253887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 842253889}
   - component: {fileID: 842253890}
-  - component: {fileID: 842253891}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1246,27 +1298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f85e0afe0b110d47b21b1cb049f4941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &842253891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842253887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b88cbd263351249adcf5aeedf95268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin: 0
-  skins:
-  - {fileID: 21300000, guid: 83c005f23706e664cb30432487f40860, type: 3}
-  - {fileID: 21300000, guid: d1cf82e1cee5cee4fbe4367466c628bb, type: 3}
-  - {fileID: 21300000, guid: cf3496b8cc393694da6b785383eb0ca1, type: 3}
-  - {fileID: 21300000, guid: 9eeafb80a3980194ea233ec1fabafabd, type: 3}
-  currentSkin: 0
-  totalCoins: 0
-  coinText: {fileID: 173842508}
 --- !u!1 &981463558
 GameObject:
   m_ObjectHideFlags: 0

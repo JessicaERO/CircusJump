@@ -20,14 +20,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinText.text = PlayerPrefs.GetInt("CoinsAmount", 0).ToString();
+        coinText.text = coin.ToString();
     }
 
     public void AddCoin()
     {
+        //Debug.Log("Coin added");
         coin++;
     }
 
+    public void SaveCoins() {
+        PlayerPrefs.SetInt("CoinsAmount", PlayerPrefs.GetInt("CoinsAmount", 0) + coin);
+    }
+    
     //public void UpdateTotalCoins(int skinPrice)
     //{
     //    totalCoins += skinPrice;

@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
             if (time >= timeMax)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                // Guardar monedas acumuladas.
+                gameManager.SaveCoins();
             }
         }
 
