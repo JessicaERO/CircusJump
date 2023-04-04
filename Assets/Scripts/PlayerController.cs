@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
                 highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
             }
         }
-        spriteRenderer.sprite = gameManager.skins[gameManager.currentSkin];
+        spriteRenderer.sprite = gameManager.skins[PlayerPrefs.GetInt("selectedSkinIndex", 0)];
     }
 
     private void Update()

@@ -282,17 +282,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83581512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517841166}
-  m_RootOrder: 8
+  m_Father: {fileID: 530266786}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 123}
+  m_AnchoredPosition: {x: 0.000015258789, y: 90.00003}
   m_SizeDelta: {x: 100, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83581514
@@ -518,17 +518,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200441257}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517841166}
-  m_RootOrder: 11
+  m_Father: {fileID: 2006011283}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: 142}
+  m_AnchoredPosition: {x: 0, y: 109.00003}
   m_SizeDelta: {x: 115, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200441259
@@ -602,6 +602,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 715176891}
+  - {fileID: 1894692688}
   m_Father: {fileID: 517841166}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -655,8 +656,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 225347250}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ComprarSkin
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -713,13 +714,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 225347245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
+  m_Script: {fileID: 11500000, guid: e31478b58db2ad246b4a41334af6573f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 2
-  costoSkin: 100
-  shop: {fileID: 2032061381}
-  gameManager: {fileID: 842253891}
+  index: 2
+  cost: 100
+  isBought: 0
+  button: {fileID: 225347247}
+  buttonText: {fileID: 715176892}
+  skinShop: {fileID: 2032061381}
 --- !u!1 &282376525
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,10 +837,6 @@ RectTransform:
   - {fileID: 1203476499}
   - {fileID: 225347246}
   - {fileID: 2006011283}
-  - {fileID: 83581513}
-  - {fileID: 1041839527}
-  - {fileID: 1894692688}
-  - {fileID: 200441258}
   m_Father: {fileID: 2032061380}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -917,6 +916,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1003006438}
+  - {fileID: 83581513}
   m_Father: {fileID: 517841166}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -970,8 +970,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 530266790}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ComprarSkin
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1028,13 +1028,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 530266785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
+  m_Script: {fileID: 11500000, guid: e31478b58db2ad246b4a41334af6573f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 0
-  costoSkin: 0
-  shop: {fileID: 2032061381}
-  gameManager: {fileID: 842253891}
+  index: 0
+  cost: 0
+  isBought: 0
+  button: {fileID: 530266787}
+  buttonText: {fileID: 1003006439}
+  skinShop: {fileID: 2032061381}
 --- !u!1 &664226659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,17 +1452,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041839526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517841166}
-  m_RootOrder: 9
+  m_Father: {fileID: 1203476499}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: 142.20001}
+  m_AnchoredPosition: {x: 0.000015258789, y: 109.20004}
   m_SizeDelta: {x: 110, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041839528
@@ -1614,6 +1616,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1751745487}
+  - {fileID: 1041839527}
   m_Father: {fileID: 517841166}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1667,8 +1670,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1203476503}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ComprarSkin
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1725,13 +1728,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1203476498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
+  m_Script: {fileID: 11500000, guid: e31478b58db2ad246b4a41334af6573f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 1
-  costoSkin: 50
-  shop: {fileID: 2032061381}
-  gameManager: {fileID: 842253891}
+  index: 1
+  cost: 50
+  isBought: 0
+  button: {fileID: 1203476500}
+  buttonText: {fileID: 1751745488}
+  skinShop: {fileID: 2032061381}
 --- !u!1 &1219879980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,17 +2063,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894692687}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517841166}
-  m_RootOrder: 10
+  m_Father: {fileID: 225347246}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 141.4}
+  m_AnchoredPosition: {x: -0.000015258789, y: 108.39995}
   m_SizeDelta: {x: 110, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894692689
@@ -2142,6 +2147,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 157667715}
+  - {fileID: 200441258}
   m_Father: {fileID: 517841166}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2195,8 +2201,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2006011287}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: ComprarSkin
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2253,13 +2259,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006011282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f80a399f6263448ac84b9828f805e7, type: 3}
+  m_Script: {fileID: 11500000, guid: e31478b58db2ad246b4a41334af6573f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinIndex: 3
-  costoSkin: 200
-  shop: {fileID: 2032061381}
-  gameManager: {fileID: 842253891}
+  index: 3
+  cost: 200
+  isBought: 0
+  button: {fileID: 2006011284}
+  buttonText: {fileID: 157667716}
+  skinShop: {fileID: 2032061381}
 --- !u!1 &2032061376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,25 +2381,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032061376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76143a97078ba04db6e1873c779156c, type: 3}
+  m_Script: {fileID: 11500000, guid: 63e8f21ba93e3674499f8a6d94cab974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 842253891}
-  coins: {fileID: 173842508}
-  skinPrice: 0
-  newSkin: {fileID: 0}
-  skinCount: 4
-  skinButtons:
-  - {fileID: 530266787}
-  - {fileID: 1203476500}
-  - {fileID: 225347247}
-  - {fileID: 2006011284}
-  skinButtonTexts:
-  - {fileID: 1003006439}
-  - {fileID: 1751745488}
-  - {fileID: 715176892}
-  - {fileID: 157667716}
-  selectedSkinIndex: 1
+  shopButtons:
+  - {fileID: 530266790}
+  - {fileID: 1203476503}
+  - {fileID: 225347250}
+  - {fileID: 2006011287}
+  coinsText: {fileID: 173842508}
 --- !u!1 &2032837938
 GameObject:
   m_ObjectHideFlags: 0
