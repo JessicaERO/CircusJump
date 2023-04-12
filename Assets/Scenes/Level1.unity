@@ -6306,7 +6306,7 @@ MonoBehaviour:
   timeMax: 0.5
   isDead: 0
   upToDown: 0
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1053570941}
 --- !u!114 &8128010642351024538
 MonoBehaviour:
   m_ObjectHideFlags: 0

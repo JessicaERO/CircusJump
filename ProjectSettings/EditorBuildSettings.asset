@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level8.unity
     guid: c51410dd671e2b149bc0ab322075d2d1
+  - enabled: 1
+    path: Assets/Scenes/ComicMenu.unity
+    guid: a7da760627d054c47901cb847f8e104b
   m_configObjects: {}

@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1855972ab7494dc488d3b2e0b5ece2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalScore: 600
+  finalScore: 400
   finalScreen: {fileID: 1576322581}
 --- !u!114 &1053570941
 MonoBehaviour:
@@ -1015,6 +1015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
+  skins: []
+  currentSkin: 0
   totalCoins: 0
   coinText: {fileID: 1729495471}
 --- !u!114 &1053570942
@@ -4398,3 +4400,4 @@ MonoBehaviour:
   timeMax: 0.5
   isDead: 0
   upToDown: 0
+  gameManager: {fileID: 1053570941}

@@ -60,6 +60,21 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level8");
     }
 
+    public void Level9()
+    {
+        SceneManager.LoadScene("Level9");
+    }
+
+    public void Level10()
+    {
+        SceneManager.LoadScene("Level10");
+    }
+
+    public void GoToComicMenu()
+    {
+        SceneManager.LoadScene("ComicMenu");
+    }
+
     public void Shop()
     {
         SceneManager.LoadScene("Shop");
