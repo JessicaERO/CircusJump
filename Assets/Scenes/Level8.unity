@@ -1224,6 +1224,7 @@ GameObject:
   - component: {fileID: 1053570940}
   - component: {fileID: 1053570941}
   - component: {fileID: 1053570942}
+  - component: {fileID: 1053570943}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalScore: 500
   finalScreen: {fileID: 1576322581}
+  winCondition: {fileID: 11400000, guid: 399ccbcbf77a5f7499cda0a0a3b6812a, type: 2}
 --- !u!114 &1053570941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,6 +1321,34 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1053570943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053570937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba4ddc6c60c9844bae322f46454269b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gEvent: {fileID: 11400000, guid: 399ccbcbf77a5f7499cda0a0a3b6812a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1053570941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SaveLevelPassed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2228,7 +2258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: COINS
+  m_Text: 'COINS: 0'
 --- !u!222 &1729495472
 CanvasRenderer:
   m_ObjectHideFlags: 0
