@@ -20,21 +20,25 @@ public class Platforms : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        plataformasChindren[plataformaRandom].SetActive(true);
+        cam = Camera.main.transform;
+        // plataformaRandom = Random.Range(0, plataformasChindren.Length);
         transform.position = new Vector3(Random.Range(1, 10), transform.position.y, transform.position.z);
+        plataformasChindren[plataformaRandom].SetActive(true);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < (cam.position.y - 10))
+        
+        if (transform.position.y < (cam.position.y - 10))
         {
-            
+            Debug.Log("soy un update");
             transform.position = new Vector3(transform.position.x, cam.position.y + 12, transform.position.z);
             transform.position = new Vector3(Random.Range(1, 10), transform.position.y, transform.position.z);
 
             //plataformasChindren[plataformaRandom].SetActive(false);
-
+            
             plataformasChindren[plataformaRandom].SetActive(false);
             plataformaRandom = Random.Range(0, plataformasChindren.Length);
             plataformasChindren[plataformaRandom].SetActive(true);
@@ -47,6 +51,7 @@ public class Platforms : MonoBehaviour
     /// </summary>
     public void ChangeTypePlatform()
     {
+       
         //desactiva la plataforma actual
         plataformasChindren[plataformaRandom].SetActive(false);
         //actualiza el indice

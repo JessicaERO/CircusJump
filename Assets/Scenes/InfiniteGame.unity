@@ -1480,6 +1480,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (15)
@@ -3166,6 +3170,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (19)
@@ -3511,6 +3519,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (18)
@@ -4237,6 +4249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (14)
@@ -4306,6 +4322,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (12)
@@ -4939,6 +4959,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (20)
@@ -5994,6 +6018,7 @@ MonoBehaviour:
   currentSkin: 0
   totalCoins: 0
   coinText: {fileID: 387057535}
+  prueba: 0
 --- !u!114 &1053570941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6581,6 +6606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (16)
@@ -8478,6 +8507,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (13)
@@ -11179,6 +11212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (17)
@@ -11910,6 +11947,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3631392501041410757, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 3264703644868723638}
     - target: {fileID: 3631392501041410760, guid: 5f96de941a2007f459c2d1265a79801a, type: 3}
       propertyPath: m_Name
       value: Platform (11)
