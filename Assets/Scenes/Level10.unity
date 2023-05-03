@@ -219,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1053570944}
+        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
+        m_MethodName: LoadInerstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &227295989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1099,7 @@ GameObject:
   - component: {fileID: 1053570941}
   - component: {fileID: 1053570942}
   - component: {fileID: 1053570943}
+  - component: {fileID: 1053570944}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -1159,6 +1172,7 @@ MonoBehaviour:
   currentSkin: 0
   totalCoins: 0
   coinText: {fileID: 1729495471}
+  prueba: 0
 --- !u!114 &1053570942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,6 +1229,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1053570944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053570937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78113e8c30dfa54cbb351897f1ebf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5266567
+  _iOSGameId: 5266566
+  _testMode: 1
 --- !u!1 &1287121875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1331,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1053570938}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1053570944}
+        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
+        m_MethodName: LoadInerstitialAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

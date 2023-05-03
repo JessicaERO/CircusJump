@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: ba01f3b4b9c045448b98a91f738dfa08
-  - enabled: 0
-    path: Assets/Scenes/SettingsMenu.unity
-    guid: 70f91b4b2316733478988f0ecb2f19a1
   - enabled: 1
     path: Assets/Scenes/LevelMenu.unity
     guid: c3edd705c72d92c4e9c2a12c046cdb88
@@ -44,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level8.unity
     guid: c51410dd671e2b149bc0ab322075d2d1
+  - enabled: 1
+    path: Assets/Scenes/Level9.unity
+    guid: 4b36cadcaf3a121469e7bfa4d241403e
+  - enabled: 1
+    path: Assets/Scenes/Level10.unity
+    guid: d0aace52557b192408c62c43aab8b28c
   - enabled: 1
     path: Assets/Scenes/ComicMenu.unity
     guid: a7da760627d054c47901cb847f8e104b

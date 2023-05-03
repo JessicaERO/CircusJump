@@ -27,12 +27,12 @@ public class ShopButton : MonoBehaviour {
         {
             if (PlayerPrefs.GetInt("selectedSkinIndex") == index) 
             {
-                buttonText.text = "Seleccionado";
+                buttonText.text = "Selected";
                 button.interactable = false;
             }
             else 
             {
-                buttonText.text = "Seleccionar";
+                buttonText.text = "Select";
                 button.interactable = true;
             }
         }
@@ -62,14 +62,14 @@ public class ShopButton : MonoBehaviour {
     private void Select() 
     {
         PlayerPrefs.SetInt("selectedSkinIndex", index);
-        buttonText.text = "Seleccionado";
+        buttonText.text = "Selected";
         button.interactable = false;
 
         foreach (ShopButton shopButton in skinShop.shopButtons) 
         {
             if (shopButton.index != PlayerPrefs.GetInt("selectedSkinIndex", 0) && shopButton.isBought) 
             {
-                shopButton.buttonText.text = "Seleccionar";
+                shopButton.buttonText.text = "Select";
                 shopButton.button.interactable = true;
             }
         }
