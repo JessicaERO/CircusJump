@@ -592,18 +592,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &327292912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -805,18 +793,6 @@ MonoBehaviour:
       - m_Target: {fileID: 842253890}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Level10
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1212,18 +1188,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &690934065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,18 +1542,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1058694192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,18 +1836,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1214410638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,18 +2029,6 @@ MonoBehaviour:
       - m_Target: {fileID: 842253890}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Level1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2404,18 +2332,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1614812317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2621,18 +2537,6 @@ MonoBehaviour:
       - m_Target: {fileID: 842253890}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Level4
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3070,18 +2974,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1927809281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3390,18 +3282,6 @@ MonoBehaviour:
       - m_Target: {fileID: 842253890}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Level3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 842253891}
-        m_TargetAssemblyTypeName: ADSample, Assembly-CSharp
-        m_MethodName: LoadInerstitialAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
