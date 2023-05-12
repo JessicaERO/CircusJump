@@ -39,11 +39,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
-        if (scene == "InfiniteGame")
+        if (Application.loadedLevelName == "InfiniteGame")
         {
+            Debug.Log("estoy entrando aqui?");
             if (PlayerPrefs.HasKey("Highscore"))
             {
-                highscoreText.text = PlayerPrefs.GetInt("Highscore").ToString();
+                highscoreText.text = "Highscore: "+PlayerPrefs.GetInt("Highscore");
             }
         }
         spriteRenderer.sprite = gameManager.skins[PlayerPrefs.GetInt("selectedSkinIndex", 0)];
