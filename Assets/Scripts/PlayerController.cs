@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    //[System.Obsolete]
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("estoy entrando aqui?");
             if (PlayerPrefs.HasKey("Highscore"))
             {
-                highscoreText.text = "Highscore: "+PlayerPrefs.GetInt("Highscore");
+                highscoreText.text = "HIGHSCORE: "+PlayerPrefs.GetInt("Highscore");
             }
         }
         spriteRenderer.sprite = gameManager.skins[PlayerPrefs.GetInt("selectedSkinIndex", 0)];
