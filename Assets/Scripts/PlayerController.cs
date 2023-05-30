@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
     private SpriteRenderer spriteRenderer;
+    public DatabaseManager dataManager;
 
     private void Awake()
     {
@@ -45,9 +46,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("estoy entrando aqui?");
             if (PlayerPrefs.HasKey("Highscore"))
             {
-                highscoreText.text = "HIGHSCORE: "+PlayerPrefs.GetInt("Highscore");
+                highscoreText.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore");
             }
         }
+
         spriteRenderer.sprite = gameManager.skins[PlayerPrefs.GetInt("selectedSkinIndex", 0)];
     }
 
@@ -110,7 +112,8 @@ public class PlayerController : MonoBehaviour
             }
             if (score>PlayerPrefs.GetInt("Highscore"))
             {
-                PlayerPrefs.SetInt("Highscore", score);
+                //PlayerPrefs.SetInt("Highscore", score);
+                dataManager.InsertarPuntos(score);
             }           
         }
     }
