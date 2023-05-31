@@ -2107,7 +2107,7 @@ PrefabInstance:
     - target: {fileID: 9040117727326756703, guid: 197852856a1c3ed40b93511764f0dc46, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2b2bcf7bd9b75fb4ebf905094f55ff83, type: 3}
+      objectReference: {fileID: 21300000, guid: b5879c1828f222a498f6e0cc0ae2631b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197852856a1c3ed40b93511764f0dc46, type: 3}
 --- !u!4 &1142996917 stripped
@@ -6258,6 +6258,7 @@ MonoBehaviour:
   isDead: 0
   upToDown: 0
   gameManager: {fileID: 1053570941}
+  dataManager: {fileID: 0}
 --- !u!1001 &8367799942306955914
 PrefabInstance:
   m_ObjectHideFlags: 0
