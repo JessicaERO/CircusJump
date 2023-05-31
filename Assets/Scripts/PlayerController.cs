@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Newtonsoft.Json.Linq;
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,9 +45,13 @@ public class PlayerController : MonoBehaviour
         if (Application.loadedLevelName == "InfiniteGame")
         {
             Debug.Log("estoy entrando aqui?");
+            //if (PlayerPrefs.HasKey("Highscore"))
+            //{
+            //    highscoreText.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore");
+            //}
             if (PlayerPrefs.HasKey("Highscore"))
             {
-                highscoreText.text = "HIGHSCORE: " + PlayerPrefs.GetInt("Highscore");
+                highscoreText.text = "HIGHSCORE: " + DataBaseManager.LoadHighscore();
             }
         }
 
@@ -110,11 +115,52 @@ public class PlayerController : MonoBehaviour
                 //Actualizamos el total de monedas ganadas guardadas
                 PlayerPrefs.SetInt("CoinsAmount", GameManager.instance.totalCoins);
             }
-            if (score>PlayerPrefs.GetInt("Highscore"))
+            //if (score > PlayerPrefs.GetInt("Highscore"))
+            //{
+            //    //PlayerPrefs.SetInt("Highscore", score);
+            //    dataManager.InsertarPuntos(score);
+            //}      
+            if (score > DataBaseManager.LoadHighscore())
             {
-                //PlayerPrefs.SetInt("Highscore", score);
-                dataManager.InsertarPuntos(score);
+                DataBaseManager.SaveHighscore(score);
             }           
         }
+    }
+
+    public class PlayerData
+    {
+        public Vector3 position;
+
+        //Constructor de la clase
+        public PlayerData(Transform transform)
+        {
+            //Rellenamos las variables con las que le pasamos por parámetro
+            position = transform.position;
+        }
+    }
+
+    //Crearemos un objeto serializable capaz de ser guardado
+    public JObject Serialize()
+    {
+        //Instanciamos la clase anidada pasándole por parámetro las variables que queremos guardar
+        PlayerData data = new PlayerData(transform);
+
+        //Creamos un string que guardará el jSon
+        string jsonString = JsonUtility.ToJson(data);
+        //Creamos un objeto en el jSon
+        JObject retVal = JObject.Parse(jsonString);
+        //Al ser un método de tipo, debe devolver este tipo
+        return retVal;
+    }
+
+    //Tendremos que deserializar la información recibida
+    public void Deserialize(string jsonString)
+    {
+        PlayerData data = new PlayerData(transform);
+        //La información recibida del archivo de guardado sobreescribirá los campos oportunos del jsonString
+        JsonUtility.FromJsonOverwrite(jsonString, data);
+
+        // Actualizamos los datos del enemigo con los datos del archivo de guardado
+        transform.position = data.position;
     }
 }

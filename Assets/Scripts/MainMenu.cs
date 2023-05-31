@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    
+
     public void startGame()
     {
         SceneManager.LoadScene("InfiniteGame");
@@ -90,9 +93,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public Text higschoreText;
+
     void Start()
     {
         //Para que la pantalla no se apague mientras juegas
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        higschoreText.text = "Highscore: " + DataBaseManager.LoadHighscore().ToString();
     }
 }
