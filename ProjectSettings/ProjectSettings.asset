@@ -251,7 +251,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/jerodriguezo/Desktop/KEY/KeyStore.keystore
+  AndroidKeystoreName: C:/Users/rodri/OneDrive/Escritorio/KEY-20230601T113813Z-001/KEY/KeyStore.keystore
   AndroidKeyaliasName: jess
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
